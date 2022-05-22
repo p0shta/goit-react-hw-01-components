@@ -1,0 +1,37 @@
+.statistics {
+    background-color: rgba(223, 223, 223, 0.308);
+    margin-bottom: 50px;
+}
+
+.title {
+    text-align: center;
+    padding: 50px;
+    opacity: 0.6;
+    text-transform: uppercase;
+}
+
+.statList {
+    display: flex;
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    background-color: rgb(201, 201, 201);
+    opacity: 0.8;
+}
+
+.label {
+    font-size: 16px;
+    color: rgb(255, 255, 255);
+    margin-bottom: 10px;
+}
+
+.percentage {
+    font-size: 26px;
+    font-weight: 600;
+    color: rgb(255, 255, 255);
+}
