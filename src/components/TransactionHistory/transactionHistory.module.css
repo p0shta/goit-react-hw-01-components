@@ -1,0 +1,25 @@
+.transactionHistory {
+    width: 100%;
+}
+
+.head {
+    width: 33.3333%;
+    padding: 15px;
+    background-color: rgba(80, 142, 158, 0.658);
+    text-transform: uppercase;
+    color: rgb(255, 255, 255);
+}
+
+.row:nth-child(2n) {
+    background-color: rgba(221, 221, 221, 0.349);
+}
+
+.body {
+    padding: 10px 50px;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.bodyCentered {
+    composes: body;
+    text-align: center;
+}
