@@ -20,13 +20,15 @@ export default function TransactionHistory({ items }) {
 
             <tbody>
                 {items.map(item => {
+                    const { type, amount, currency, id } = item;
+
                     return (
-                        <tr key={item.id} className={s.row}>
+                        <tr key={id} className={s.row}>
                             <td className={s.body}>
-                                {capitalizesFirstLetter(item.type)}
+                                {capitalizesFirstLetter(type)}
                             </td>
-                            <td className={s.bodyCentered}>{item.amount}</td>
-                            <td className={s.bodyCentered}>{item.currency}</td>
+                            <td className={s.bodyCentered}>{amount}</td>
+                            <td className={s.bodyCentered}>{currency}</td>
                         </tr>
                     );
                 })}
@@ -36,5 +38,12 @@ export default function TransactionHistory({ items }) {
 }
 
 TransactionHistory.propTypes = {
-    items: PropTypes.array,
+    items: PropTypes.arrayOf(
+        PropTypes.shape({
+            amount: PropTypes.string.isRequired,
+            currency: PropTypes.string.isRequired,
+            id: PropTypes.string.isRequired,
+            type: PropTypes.string.isRequired,
+        })
+    ),
 };

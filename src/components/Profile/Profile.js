@@ -3,6 +3,7 @@ import s from './profile.module.css';
 
 export default function Profile(props) {
     const { avatar, stats, location, tag, username } = props;
+    const { followers, views, likes } = stats;
 
     return (
         <div className={s.profile}>
@@ -21,15 +22,15 @@ export default function Profile(props) {
             <ul className={s.stats}>
                 <li>
                     <span className={s.label}>Followers</span>
-                    <span className={s.quantity}> {stats.followers}</span>
+                    <span className={s.quantity}> {followers}</span>
                 </li>
                 <li>
                     <span className={s.label}>Views</span>
-                    <span className={s.quantity}> {stats.views}</span>
+                    <span className={s.quantity}> {views}</span>
                 </li>
                 <li>
                     <span className={s.label}>Likes</span>
-                    <span className={s.quantity}> {stats.likes}</span>
+                    <span className={s.quantity}> {likes}</span>
                 </li>
             </ul>
         </div>
